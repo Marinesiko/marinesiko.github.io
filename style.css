@@ -1,25 +1,75 @@
-.textcols {
-	white-space: nowrap;
+.header
+{
+  height: auto;
+  text-align: center;
+  background: linear-gradient(rgb(250, 243, 214), rgb(234, 241, 208), rgb(252, 228, 122));
+  border: solid;
+  border-width: 10px 20px 10px 20px;
+  border-color: rgb(241, 229, 174);  
 }
-.textcols-item {
-	white-space: normal;	
-	display: inline-block;
-	width: 48%;
-	vertical-align: top;
-	background: #fdf6ed;
+
+.main
+{
+height: auto;
+text-align: center;
+border: solid;
+background: rgb(250, 243, 214);
+border-width: 10px 20px 0px 20px;
+border-color: rgb(241, 229, 174);
 }
-.textcols .textcols-item:first-child {
-	margin-right: 4%;
+
+.footer
+{ 
+  height: auto;
+  text-align: center;
+  background: linear-gradient(rgb(241, 229, 174), rgb(250, 243, 214));
 }
-.avatar
-  {
-  width: 100px;
-  height: 130px;
-  border: 0px;
-  }
-img
-  {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  }
+
+li {
+  text-align: left;
+  list-style-position: inside;
+  color: rgba(146, 61, 27, 0.863);
+}
+
+
+pre {
+  color: rgb(108, 117, 114);
+}
+
+p {
+  color: rgba(146, 61, 27, 0.863);
+}
+
+.grid > * {
+  padding: 7px;
+  margin: 0px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  
+} 
+
+.tree > * {
+  padding: 7px;
+  margin: 0px;
+}
+
+.tree {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  
+} 
+
+h4
+{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+color: rgb(108, 117, 114);
+}
+
+h1,
+h2
+{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+color: rgba(146, 61, 27, 0.863);
+}
