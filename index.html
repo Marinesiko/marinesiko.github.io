@@ -52,67 +52,32 @@
       <div>
         <h2 id="code">Code example:</h2>       
         <code>
-           import requests
+           import requests     
 
-class Delete_new_location():
-    """"Удаление новых локаций"""
+class TestCreateJoke():
+    """Класс включающий сценарии по отправке запросов, с целью получения шуток с Чаком Норрисом"""
 
-    def test_delete_location(self):
+    def test_create_random_joke(self):
+        """Тест по получению рандомной шутки, включает:
+                 отправку запроса, проверка на статус-код, печать шутки."""
 
-        """"Отправить метод DELETE,  с помощью которого удалить 2-й и 4-й place_id из текстового файла"""
+        url = 'https://api.chucknorris.io/jokes/random'
+        print(url)
 
-        base_url = "https://rahulshettyacademy.com"  # базовый url
-        delete_resource = "/maps/api/place/delete/json"
-        key = "?key=qaclick123"  # параметр для всех запросов
-        delete_url = base_url + delete_resource + key
-        file = open("place_id_google.txt", "r")
-        content = file.readlines()
+        result = requests.get(url)
+        print(result.json())
 
-        spisok = [1, 3]
-        print("***Отправить метод DELETE,  с помощью которого удалить 2-й и 4-й place_id из текстового файла***")
-        for i in spisok:
-            place_id = content[i].rstrip()
-            json_for_delete_new_location = {
-                "place_id": place_id
-            }
-            result_delete = requests.delete(delete_url, json=json_for_delete_new_location)
-            print(result_delete.text)
-            print("Статус код : " + str(result_delete.status_code))
-            assert 200 == result_delete.status_code
-            if result_delete.status_code == 200:
-                print("Удаление локации прошло успешно")
-            else:
-                print("Провал!!! Запрос ошибочный")
+        print(f'Статус-код: {result.status_code}')
+        assert result.status_code == 200, 'ОШИБКА, Статус-код не совпадает'
+        print('Статус-код корректен')
 
-        """Проверка удаления новой локации"""
+        check_joke = result.json()
+        joke_value = check_joke.get("value")
+        print(joke_value)
+        print("Тест прошел успешно")
 
-        base_url_get = "https://rahulshettyacademy.com"  # базовый url
-        get_resource_get = "/maps/api/place/get/json"
-
-        print("***Отправить метод Get который будет читать place_id из текстового файла, и сделает отбор на существующие и несуществующие локации***")
-
-        with open("place_id_google.txt", "r") as file:
-            for i in file:
-
-                last_line_string = i.rstrip()
-                place_id_line = str("&place_id=" + last_line_string)
-                get_url = base_url_get + get_resource_get + key + place_id_line
-                result_get = requests.get(get_url)
-                print("Place_id : " + last_line_string + " Статус код : " + str(result_get.status_code))
-                if result_get.status_code == 200:
-                    """Создаем файл с существующими локациями"""
-                    print("Локация существует")
-                    file_for_place_id = open('place_good_id.txt', 'a')  # открытие в режиме записи
-                    file_for_place_id.write(last_line_string + '\n')
-                else:
-                    print("Данная локация не существует")
-
-
-        print("Тестирование Delete_new_location завершено успешно")
-
-
-delete_place = Delete_new_location()
-delete_place.test_delete_location()
+start = TestCreateJoke()    # Создание экземпляра класса
+start.test_create_random_joke()    # Вызов метода с тестом
           </code>
       </div>
       <div>
