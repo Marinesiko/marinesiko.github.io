@@ -2,7 +2,8 @@
 {
   height: auto;
   text-align: left;
-  background: linear-gradient(rgb(201,215,192), rgb(230,238,227),  rgb(168,171,158));
+  background: rgb(209,226,210);
+  background: linear-gradient(90deg, rgba(209,226,210,1) 16%, rgba(156,181,149,1) 48%, rgba(66,89,66,1) 78%);
   border: solid;
   border-width: 10px 20px 10px 20px;
   border-color: rgb(201,215,192);
