@@ -1,7 +1,7 @@
 .header
 {
   height: auto;
-  text-align: center;
+  text-align: left;
   background: linear-gradient(rgb(250, 243, 214), rgb(234, 241, 208), rgb(252, 228, 122));
   border: solid;
   border-width: 10px 20px 10px 20px;
