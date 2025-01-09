@@ -55,6 +55,7 @@ p {
 
 .grid li {
   color: rgba(146, 61, 27, 0.863);
+  text-align: left;
 }
 
 .tree > * {
