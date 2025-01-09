@@ -48,7 +48,7 @@ p {
 }
 
 .grid ul {
-  text-align: center;
+  text-align: left;
   list-style: none;
   color: rgba(146, 61, 27, 0.863);
 }
