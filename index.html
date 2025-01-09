@@ -52,32 +52,49 @@
       <div>
         <h2 id="code">Code example:</h2>       
         <pre>
-           import requests     
+           import requests
 
-class TestCreateJoke():
-    """Класс включающий сценарии по отправке запросов, с целью получения шуток с Чаком Норрисом"""
+class Random_categories():
+    """Создание новых шуток"""
 
-    def test_create_random_joke(self):
-        """Тест по получению рандомной шутки, включает:
-                 отправку запроса, проверка на статус-код, печать шутки."""
-
-        url = 'https://api.chucknorris.io/jokes/random'
-        print(url)
-
+    def __init__(self):
+        pass
+    def get_categories(self):
+        """Получение категорий"""
+        url = "https://api.chucknorris.io/jokes/categories"
         result = requests.get(url)
-        print(result.json())
+        text = result.json()
+        for x in text:
+            """Выводим все категории на печать"""
+            print(x)
+    def all_joke_categories(self):
 
-        print(f'Статус-код: {result.status_code}')
-        assert result.status_code == 200, 'ОШИБКА, Статус-код не совпадает'
-        print('Статус-код корректен')
+        """Получение шуток по категориям"""
+        url = "https://api.chucknorris.io/jokes/categories"
+        result = requests.get(url)
+        text = result.json()
+        for x in text:
+            url = "https://api.chucknorris.io/jokes/random?category=" + x
+            result = requests.get(url)
+            print(result.text)
+            """Проверка на статус-код """
+            print("Статус код : " + str(result.status_code))
+            assert 200 == result.status_code
+            if result.status_code == 200:
+                print("Поздравляем! Мы получили новую шутку")
+            else:
+                print("К сожалению, запрос ошибочный ((")
+                result.encoding = 'utf-8'
+                print(result.text)
 
-        check_joke = result.json()
-        joke_value = check_joke.get("value")
-        print(joke_value)
-        print("Тест прошел успешно")
 
-start = TestCreateJoke()    # Создание экземпляра класса
-start.test_create_random_joke()    # Вызов метода с тестом
+# Задание №1: Отправить запрос для получения всех категорий
+homework1 = Random_categories()
+homework1.get_categories()
+
+# Задание №2: Получить 1 шутку по каждой из категорий (16 шт) - всего 16 шуток
+homework2 = Random_categories()
+homework2.all_joke_categories()
           </pre>
       </div>
       <div>
