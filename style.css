@@ -6,7 +6,7 @@
   background: rgb(255, 255, 255);
   border: solid;
   border-width: 10px 10px 10px 10px;
-  border-color: rgba(209,226,210,1);
+  border-color: rgba(208,240,192,1);
 }
 
 .main
@@ -16,14 +16,14 @@ text-align: left;
 border: solid;
 background: rgb(255, 255, 255);
 border-width: 10px 10px 0px 10px;
-border-color: rgba(209,226,210,1);
+border-color: rgba(208,240,192,1);
 }
 
 .footer
 { 
   height: auto;
   text-align: center;
-  background: rgba(209,226,210,1);
+  background: rgba(208,240,192,1);
 }
 
 
