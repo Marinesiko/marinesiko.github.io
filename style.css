@@ -2,11 +2,11 @@
 {
   height: auto;
   text-align: left;
-  background: rgb(209,226,210);
+  background: rgb(240,243,235);
   background: rgb(255, 255, 255);
   border: solid;
   border-width: 10px 10px 10px 10px;
-  border-color: rgba(208,240,192,1);
+  border-color: rgb(240,243,235);
 }
 
 .main
@@ -16,14 +16,14 @@ text-align: left;
 border: solid;
 background: rgb(255, 255, 255);
 border-width: 10px 10px 0px 10px;
-border-color: rgba(208,240,192,1);
+border-color: rgb(240,243,235);
 }
 
 .footer
 { 
   height: auto;
   text-align: center;
-  background: rgba(208,240,192,1);
+  background: rgb(240,243,235);
 }
 
 
