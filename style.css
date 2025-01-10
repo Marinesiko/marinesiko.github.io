@@ -28,11 +28,11 @@ border-color: rgba(209,226,210,1);
 
 
 pre {
-  color: rgb(108, 117, 114);
+  color: rgb(0, 0, 0);
 }
 
 p {
-  color: rgba(146, 61, 27, 0.863);
+  color: rgb(0, 0, 0);
 }
 
 .grid > * {
