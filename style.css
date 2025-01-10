@@ -2,9 +2,7 @@
 {
   height: auto;
   text-align: left;
-  background: url("https://i.pinimg.com/originals/0d/9b/24/0d9b24189f42fb3f2563ef854b41ab0f.png");
-  background-size: contain;
-  background-position: center;
+  background: rgb(240,243,235);
   border: solid;
   border-width: 10px 10px 10px 10px;
   border-color: rgb(240,243,235);
