@@ -3,13 +3,22 @@
   height: auto;
   text-align: left;
   background: rgb(240,243,235);
-  background: rgb(240,243,235);
   border: solid;
   border-width: 10px 10px 10px 10px;
   border-color: rgb(240,243,235);
 }
 
 .main
+{
+height: auto;
+text-align: left;
+border: solid;
+background: rgb(255, 255, 255);
+border-width: 10px 10px 0px 10px;
+border-color: rgb(240,243,235);
+}
+
+.body
 {
 height: auto;
 text-align: left;
