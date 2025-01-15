@@ -6,6 +6,16 @@
     <title>Моё резюме</title>
     <link href="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/snow.min.css" rel="stylesheet">
    </head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+ $('.spoiler_links').click(function(){
+  $(this).parent().children('div.more').toggle('normal');
+  return false;
+ });
+});
+</script>
 
    <header class = "header">
     <div class= "grid">
@@ -53,6 +63,18 @@
   
 </div>
 <div>
+  
+<div>
+ <div>Основной текст</div>
+ <div class="more" style="display:none">
+  Текст под спойлером<br>
+  плавно появляется<br>
+  и плавно исчезает<br>
+  при клике по спойлеру
+ </div>
+ <a href="" class="spoiler_links">Показать</a>
+</div>
+</div>
   <h2 id="contacts">Контакты</h2>
   <ul>
     <li>Москва, Россия</li>
